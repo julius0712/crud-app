@@ -7,12 +7,12 @@ const form = ref({ name: '', description: '' })
 const editId = ref(null)
 
 async function load() {
-  items.value = await fetch(API).then(r => r.json())  // ✅ fetch
+  items.value = await fetch(API).then(r => r.json())  
 }
 
 async function save() {
   if (editId.value) {
-    await fetch(`${API}/${editId.value}`, {           // ✅ backticks
+    await fetch(`${API}/${editId.value}`, {          
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form.value)
@@ -35,7 +35,7 @@ function startEdit(item) {
 }
 
 async function remove(id) {
-  await fetch(`${API}/${id}`, { method: 'DELETE' })   // ✅ backticks
+  await fetch(`${API}/${id}`, { method: 'DELETE' })   
   load()
 }
 
