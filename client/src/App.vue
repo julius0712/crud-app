@@ -46,14 +46,12 @@ onMounted(load)
   <main>
     <div class="container">
       <h1>🛒 Items Manager</h1>
-
       <form @submit.prevent="save" class="form">
         <input v-model="form.name" placeholder="Name" required />
         <input v-model="form.description" placeholder="Description" />
         <input v-model="form.price" placeholder="Price" type="number" step="0.01" min="0" />
         <button type="submit">{{ editId ? '✏️ Update' : '➕ Add' }}</button>
       </form>
-
       <table>
         <thead>
           <tr>
@@ -65,7 +63,7 @@ onMounted(load)
         </thead>
         <tbody>
           <tr v-for="item in items" :key="item.id">
-            <td><strong>{{ item.name }}</strong></td>
+            <td>{{ item.name }}</td>
             <td>{{ item.description }}</td>
             <td>₱{{ Number(item.price).toFixed(2) }}</td>
             <td>
@@ -99,7 +97,7 @@ main {
   border-radius: 12px;
   padding: 32px;
   width: 100%;
-  max-width: 750px;
+  max-width: 900px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
@@ -156,10 +154,17 @@ thead {
   color: white;
 }
 
-th, td {
+th {
+  padding: 12px 16px;
+  text-align: left;
+  color: white;
+}
+
+td {
   padding: 12px 16px;
   text-align: left;
   border-bottom: 1px solid #e2e8f0;
+  color: #2d3748;
 }
 
 tbody tr:hover {
