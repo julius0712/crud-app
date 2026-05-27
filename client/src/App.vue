@@ -86,26 +86,28 @@ onMounted(load)
 
 main {
   min-height: 100vh;
-  width: 100%;
-  background: #f0f4f8;
+  width: 100vw;
+  background: #0f172a;
   display: flex;
   justify-content: center;
   padding: 40px 16px;
 }
 
 .container {
-  background: white;
-  border-radius: 12px;
+  background: #1e293b;
+  border-radius: 16px;
   padding: 32px;
   width: 100%;
   max-width: 900px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  height: fit-content;
 }
 
 h1 {
   font-size: 1.8rem;
   margin-bottom: 24px;
-  color: #2d3748;
+  color: #f1f5f9;
+  letter-spacing: 0.5px;
 }
 
 .form {
@@ -118,31 +120,38 @@ h1 {
 .form input {
   flex: 1;
   min-width: 120px;
-  padding: 10px 12px;
-  border: 1px solid #cbd5e0;
+  padding: 10px 14px;
+  background: #0f172a;
+  border: 1px solid #334155;
   border-radius: 8px;
   font-size: 0.95rem;
+  color: #f1f5f9;
   outline: none;
   transition: border 0.2s;
 }
 
+.form input::placeholder {
+  color: #64748b;
+}
+
 .form input:focus {
-  border-color: #667eea;
+  border-color: #3b82f6;
 }
 
 .form button {
   padding: 10px 20px;
-  background: #667eea;
+  background: #3b82f6;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.95rem;
+  font-weight: 600;
   transition: background 0.2s;
 }
 
 .form button:hover {
-  background: #5a67d8;
+  background: #2563eb;
 }
 
 table {
@@ -151,53 +160,62 @@ table {
 }
 
 thead {
-  background: #667eea;
-  color: white;
+  background: #0f172a;
 }
 
 th {
   padding: 12px 16px;
   text-align: left;
-  color: white;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 td {
-  padding: 12px 16px;
+  padding: 14px 16px;
   text-align: left;
-  border-bottom: 1px solid #e2e8f0;
-  color: #2d3748;
+  border-bottom: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+tbody tr {
+  background: #0f172a;
+  transition: background 0.2s;
 }
 
 tbody tr:hover {
-  background: #f7fafc;
+  background: #1e3a5f;
 }
 
 .btn-edit {
-  padding: 6px 12px;
-  background: #48bb78;
+  padding: 6px 14px;
+  background: #10b981;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   margin-right: 6px;
+  font-weight: 600;
   transition: background 0.2s;
 }
 
 .btn-edit:hover {
-  background: #38a169;
+  background: #059669;
 }
 
 .btn-delete {
-  padding: 6px 12px;
-  background: #fc8181;
+  padding: 6px 14px;
+  background: #ef4444;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
   transition: background 0.2s;
 }
 
 .btn-delete:hover {
-  background: #e53e3e;
+  background: #dc2626;
 }
 </style>
