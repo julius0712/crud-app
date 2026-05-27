@@ -86,6 +86,7 @@ onMounted(load)
 
 main {
   min-height: 100vh;
+  width: 100%;
   background: #f0f4f8;
   display: flex;
   justify-content: center;
