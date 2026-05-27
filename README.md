@@ -1,8 +1,12 @@
 # CRUD Application using Vue, Express & Supabase
 
 GROUP MEMBERS:
+GROUP:MEMBERS
 JULIUS B. ESPADA
 JELLY ANN O. LAÑA
 ADELFA P. GUTING
 VANNY P. PABILLO
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42ff2ea30f68d6802426fdf6c79d1eb73ac26509
