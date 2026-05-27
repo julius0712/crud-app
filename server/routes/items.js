@@ -17,24 +17,24 @@ router.get('/', async (req, res) => {
 
 // CREATE
 router.post('/', async (req, res) => {
-    const { name, description } = req.body;
+    const { name, description, price } = req.body;  // ✅ added price
     const { data, error } = await supabase.from('items')
-        .insert([{ name, description }]).select();
+        .insert([{ name, description, price }]).select();  // ✅ added price
     if (error) return res.status(500).json({ error });
     res.status(201).json(data[0]);
 });
 
 // UPDATE
-router.put('/:id', async (req, res) => {   // ✅ /:id
-    const { name, description } = req.body;
+router.put('/:id', async (req, res) => {
+    const { name, description, price } = req.body;  // ✅ added price
     const { data, error } = await supabase.from('items')
-        .update({ name, description }).eq('id', req.params.id).select();
+        .update({ name, description, price }).eq('id', req.params.id).select();  // ✅ added price
     if (error) return res.status(500).json({ error });
     res.json(data[0]);
 });
 
 // DELETE
-router.delete('/:id', async (req, res) => {  // ✅ /:id
+router.delete('/:id', async (req, res) => {
     const { error } = await supabase.from('items')
         .delete().eq('id', req.params.id);
     if (error) return res.status(500).json({ error });
