@@ -1,3 +1,8 @@
 # CRUD Application using Vue, Express & Supabase
 
-Author: Julius B. Espada
+GROUP MEMBERS:
+JULIUS B. ESPADA
+JELLY ANN O. LAÑA
+ADELFA P. GUTING
+VANNY P. PABILLO
+
